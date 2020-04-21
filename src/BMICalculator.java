@@ -1,6 +1,6 @@
 /** This class allows the calculation of Body Mass Index.
  * The process is:
- * 	ask user: height & weight
+ * 	data: height & weight
  *	IF height or weight = 0: error: "Incorrect input values." THEN return to beginning (ask input) END IF
  *	x = weight / height^2
  *	message user: "The result BMI is: ", x
