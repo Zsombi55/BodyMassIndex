@@ -10,6 +10,8 @@
 public class BMICalculator {
 	private double weight, height, bmi; // variable declaration
 
+	public BMICalculator () {} // constructor
+	
 	public BMICalculator (double weight, double height) { // constructor
 		this.weight = weight;
 		this.height = height;
@@ -17,6 +19,8 @@ public class BMICalculator {
 
 	public static void main(String[] args) {
 		BMICalculator calculator = new BMICalculator(60, 0.70); //new app instance with static input
+		//BMICalculator calculator = new BMICalculator(); //generic new app instance
+		//calculator.inputData();		
 		double bmic = calculator.calculate();
 		System.out.println("The result BMI is: " + bmic);
 		System.out.println("Overweight? " + calculator.isOverweight());
@@ -29,5 +33,17 @@ public class BMICalculator {
 
 	public boolean isOverweight() { // check for "bad weight status" based on the MBI.
 		return (bmi > 25);
+	}
+	
+	public void inputData() {
+		String i;
+		System.out.println("Enter weigth: ");
+		i = System.console().readLine();
+		this.weight = Double.parseDouble(i);
+	    System.out.println("--> " + this.weight);
+	    System.out.println("Enter heigth: ");
+	    i = System.console().readLine();
+	    this.height = Double.parseDouble(i);
+	    System.out.println("--> " + this.height);
 	}
 }
